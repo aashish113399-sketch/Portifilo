@@ -3,20 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aashish Chand — AI/ML Engineer | IT Student | Portfolio</title>
-  <meta name="description" content="Aashish Chand — Student @ Model Institute of Technology (MIT) Nepal | Aspiring AI/ML Engineer exploring Python, TensorFlow, Data Science & AWS Cloud." />
+  <title>Aashish Chand — BIT @ MIT Nepal | Portfolio</title>
+  <meta name="description" content="Aashish Chand — Bachelor in IT @ Model Institute of Technology (MIT) Nepal | Internship seeker | AWS Cloud Architecture & Operations | Python, C++, JS, Docker, GitHub" />
   <meta name="author" content="Aashish Chand" />
-  <meta property="og:title" content="Aashish Chand — Portfolio" />
-  <meta property="og:description" content="Aspiring AI/ML Engineer | IT Student @ MIT Nepal | Python, TensorFlow, AWS" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://aashish113399-sketch.github.io/Portifilo/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
@@ -26,19 +21,16 @@
           },
           animation: {
             'float': 'float 6s ease-in-out infinite',
-            'glow': 'glow 2s ease-in-out infinite alternate',
-            'typing': 'typing 3s steps(40, end)',
           },
           keyframes: {
-            float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
-            glow: { '0%': { boxShadow: '0 0 20px rgba(99,102,241,0.4)' }, '100%': { boxShadow: '0 0 30px rgba(99,102,241,0.7)' } }
+            float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } }
           }
         }
       }
     }
   </script>
   <style>
-    :root { --bg: #0a0a0f; --bg-soft: #11111b; --card: #181825; --border: #232334; --text: #cdd6f4; --muted: #a6adc8; --accent: #7c3aed; --accent2: #06b6d4; }
+    :root { --bg: #0a0a0f; --card: #181825; --border: #232334; --text: #cdd6f4; --muted: #a6adc8; }
     * { scrollbar-width: thin; scrollbar-color: #7c3aed #0a0a0f; }
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: #0a0a0f; }
@@ -49,19 +41,13 @@
     .gradient-text { background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 50%, #a78bfa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .gradient-border { position: relative; }
     .gradient-border::before { content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1px; background: linear-gradient(135deg, #7c3aed, #06b6d4); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
-    .noise::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E"); pointer-events: none; }
     .grid-pattern { background-image: linear-gradient(rgba(124,58,237,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(124,58,237,0.03) 1px, transparent 1px); background-size: 40px 40px; }
-    .skill-card:hover { transform: translateY(-2px); border-color: rgba(124,58,237,0.3); box-shadow: 0 10px 30px rgba(124,58,237,0.15); }
-    .project-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-    .project-card:hover { transform: translateY(-6px) scale(1.01); }
-    .project-card:hover .project-img { transform: scale(1.05); }
-    .cursor-blink::after { content: '|'; animation: blink 1s infinite; margin-left: 2px; color: #7c3aed; }
-    @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
-    .magnetic { transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
+    .badge-shield { transition: transform 0.2s; }
+    .badge-shield:hover { transform: translateY(-2px) scale(1.03); }
   </style>
 </head>
 <body class="antialiased relative">
-  <!-- Background Orbs -->
+  <!-- Background -->
   <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
     <div class="absolute -top-[40%] -left-[20%] w-[80%] h-[80%] rounded-full bg-gradient-to-br from-violet-600/20 to-indigo-600/20 blur-[120px]"></div>
     <div class="absolute -bottom-[30%] -right-[20%] w-[70%] h-[70%] rounded-full bg-gradient-to-br from-cyan-500/15 to-violet-600/15 blur-[120px]"></div>
@@ -69,19 +55,19 @@
     <div class="absolute inset-0 grid-pattern opacity-50"></div>
   </div>
 
-  <!-- Navigation -->
+  <!-- Nav -->
   <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-8">
       <div class="flex items-center justify-between h-[72px]">
         <a href="#" class="flex items-center gap-3 group">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-cyan-500 flex items-center justify-center font-display font-bold text-white shadow-lg shadow-violet-600/20 group-hover:shadow-violet-600/40 transition-all">AC</div>
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-cyan-500 flex items-center justify-center font-display font-bold text-white shadow-lg shadow-violet-600/20">AC</div>
           <span class="font-display font-semibold tracking-tight">Aashish.dev</span>
         </a>
         <div class="hidden md:flex items-center gap-1 glass rounded-full p-1.5">
           <a href="#about" class="px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10 transition">About</a>
-          <a href="#skills" class="px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10 transition">Skills</a>
+          <a href="#tech" class="px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10 transition">Tech Stack</a>
+          <a href="#stats" class="px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10 transition">Stats</a>
           <a href="#projects" class="px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10 transition">Projects</a>
-          <a href="#education" class="px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10 transition">Education</a>
           <a href="#contact" class="px-4 py-1.5 rounded-full text-sm font-medium bg-white text-black hover:bg-white/90 transition">Contact</a>
         </div>
         <div class="flex items-center gap-3">
@@ -96,598 +82,300 @@
     </div>
     <div id="mobile-menu" class="hidden md:hidden glass-strong mx-6 rounded-2xl p-4 space-y-1">
       <a href="#about" class="block px-4 py-2.5 rounded-xl hover:bg-white/10">About</a>
-      <a href="#skills" class="block px-4 py-2.5 rounded-xl hover:bg-white/10">Skills</a>
+      <a href="#tech" class="block px-4 py-2.5 rounded-xl hover:bg-white/10">Tech Stack</a>
+      <a href="#stats" class="block px-4 py-2.5 rounded-xl hover:bg-white/10">Stats</a>
       <a href="#projects" class="block px-4 py-2.5 rounded-xl hover:bg-white/10">Projects</a>
-      <a href="#education" class="block px-4 py-2.5 rounded-xl hover:bg-white/10">Education</a>
       <a href="#contact" class="block px-4 py-2.5 rounded-xl bg-white text-black">Contact</a>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section class="relative min-h-[100vh] flex items-center pt-20">
-    <div class="max-w-[1200px] mx-auto px-6 lg:px-8 w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-8 items-center">
-      <div class="relative z-10">
+  <section class="relative min-h-[90vh] flex items-center pt-24 pb-12">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-8 w-full grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center">
+      <div>
         <div class="inline-flex items-center gap-2 glass rounded-full px-3 py-1 text-xs font-mono mb-6">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Available for internships • MIT Nepal
+          BIT Student @ MIT Nepal • Open to Internships
         </div>
         <h1 class="font-display font-bold leading-[0.9] tracking-tight">
-          <span class="block text-[14px] sm:text-[15px] font-mono font-medium tracking-[0.2em] uppercase text-violet-300 mb-4">Aspiring AI/ML Engineer</span>
-          <span class="block text-[42px] sm:text-[56px] lg:text-[68px]">Hi, I'm</span>
-          <span class="block text-[42px] sm:text-[56px] lg:text-[68px] gradient-text">Aashish Chand</span>
+          <span class="block text-[14px] font-mono font-medium tracking-[0.2em] uppercase text-violet-300 mb-4">Bachelor in Information Technology</span>
+          <span class="block text-[42px] sm:text-[56px] lg:text-[64px]">I'm</span>
+          <span class="block text-[42px] sm:text-[56px] lg:text-[64px] gradient-text">Aashish Chand</span>
         </h1>
-        <p class="mt-6 text-[17px] leading-7 text-[#a6adc8] max-w-[560px] font-body">
-          Bachelor in IT student @ <span class="text-white font-medium">Model Institute of Technology (MIT) Nepal</span>. I build intelligent systems with Python, TensorFlow & AWS — passionate about turning data into real-world impact.
-        </p>
-
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="#projects" class="group relative inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-medium text-[14px] hover:bg-white/90 transition-all">
-            View Projects
-            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center group-hover:translate-x-0.5 transition-transform">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </a>
-          <a href="mailto:aashishchand1001@gmail.com" class="inline-flex items-center gap-2 glass rounded-full px-6 py-3 font-medium text-[14px] hover:bg-white/10 transition">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Email Me
-          </a>
-          <a href="https://github.com/aashish113399-sketch/Portifilo/raw/main/resume.pdf" onclick="event.preventDefault(); alert('Resume coming soon! Contact me at aashishchand1001@gmail.com')" class="inline-flex items-center gap-2 text-[#a6adc8] hover:text-white px-2 py-3 font-medium text-[14px] transition">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            Download CV
-          </a>
-        </div>
-
-        <div class="mt-10 flex items-center gap-6">
-          <div class="flex -space-x-2">
-            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-violet-600 to-indigo-600 border-2 border-[#0a0a0f] flex items-center justify-center text-xs font-bold">Py</div>
-            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 border-2 border-[#0a0a0f] flex items-center justify-center text-xs font-bold">TF</div>
-            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 border-2 border-[#0a0a0f] flex items-center justify-center text-xs font-bold">AWS</div>
-          </div>
-          <p class="text-sm text-[#a6adc8] font-mono">Trusted stack for AI & Cloud solutions</p>
-        </div>
-
-        <div class="mt-12 grid grid-cols-3 gap-6 max-w-[420px] border-t border-white/10 pt-8">
-          <div><div class="font-display text-2xl font-bold">7+</div><div class="text-xs text-[#a6adc8] font-mono uppercase tracking-wide mt-1">Repositories</div></div>
-          <div><div class="font-display text-2xl font-bold">3+</div><div class="text-xs text-[#a6adc8] font-mono uppercase tracking-wide mt-1">Years Learning</div></div>
-          <div><div class="font-display text-2xl font-bold">∞</div><div class="text-xs text-[#a6adc8] font-mono uppercase tracking-wide mt-1">Curiosity</div></div>
-        </div>
-      </div>
-
-      <!-- Visual / Code Card -->
-      <div class="relative lg:h-[600px] flex items-center justify-center">
-        <div class="relative w-full max-w-[480px]">
-          <!-- Glow -->
-          <div class="absolute -inset-6 bg-gradient-to-br from-violet-600/20 to-cyan-500/20 blur-2xl rounded-[32px]"></div>
-          
-          <!-- Main Card -->
-          <div class="relative glass-strong rounded-[24px] overflow-hidden gradient-border">
-            <!-- Terminal Header -->
-            <div class="flex items-center justify-between px-5 py-4 border-b border-white/10">
-              <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
-              </div>
-              <div class="font-mono text-xs text-[#a6adc8]">aashish@mit-nepal — zsh</div>
-              <div class="w-6"></div>
-            </div>
-            <!-- Code Content -->
-            <div class="p-6 font-mono text-[13px] leading-6">
-              <div class="text-[#a6adc8]"><span class="text-violet-400">➜</span> <span class="text-cyan-300">whoami</span></div>
-              <div class="mt-3 space-y-1.5">
-                <div><span class="text-[#6c7086]">1</span> <span class="ml-4 text-violet-300">class</span> <span class="text-cyan-200">AashishChand</span><span class="text-white">:</span></div>
-                <div><span class="text-[#6c7086]">2</span> <span class="ml-8 text-white">def</span> <span class="text-yellow-200">__init__</span><span class="text-white">(self):</span></div>
-                <div><span class="text-[#6c7086]">3</span> <span class="ml-12 text-white">self.role = </span><span class="text-green-300">"AI/ML Engineer"</span></div>
-                <div><span class="text-[#6c7086]">4</span> <span class="ml-12 text-white">self.location = </span><span class="text-green-300">"Nepal 🇳🇵"</span></div>
-                <div><span class="text-[#6c7086]">5</span> <span class="ml-12 text-white">self.focus = [</span><span class="text-green-300">"Python"</span><span class="text-white">, </span><span class="text-green-300">"TensorFlow"</span><span class="text-white">, </span><span class="text-green-300">"AWS"</span><span class="text-white">]</span></div>
-                <div><span class="text-[#6c7086]">6</span></div>
-                <div><span class="text-[#6c7086]">7</span> <span class="ml-8 text-white">def</span> <span class="text-yellow-200">build_future</span><span class="text-white">(self):</span></div>
-                <div><span class="text-[#6c7086]">8</span> <span class="ml-12 text-violet-300">return</span> <span class="text-green-300">"Intelligent Systems"</span></div>
-                <div><span class="text-[#6c7086]">9</span></div>
-                <div class="pt-3 border-t border-white/10 mt-4">
-                  <div class="text-[#a6adc8]"><span class="text-violet-400">➜</span> <span class="text-cyan-300" id="typed-text"></span><span class="cursor-blink"></span></div>
-                </div>
-              </div>
-              <!-- Mini stats -->
-              <div class="mt-6 grid grid-cols-2 gap-3">
-                <div class="glass rounded-xl p-3">
-                  <div class="text-[11px] text-[#a6adc8] uppercase tracking-wide">Status</div>
-                  <div class="mt-1 flex items-center gap-2 text-xs"><span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span> Learning AWS Cloud Ops</div>
-                </div>
-                <div class="glass rounded-xl p-3">
-                  <div class="text-[11px] text-[#a6adc8] uppercase tracking-wide">Goal</div>
-                  <div class="mt-1 text-xs text-white">Internship 2026</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Floating badges -->
-          <div class="absolute -right-4 top-[18%] glass rounded-full px-3 py-1.5 text-xs font-medium flex items-center gap-2 shadow-xl animate-float">
-            <span class="w-6 h-6 rounded-full bg-[#ff9900] flex items-center justify-center text-[10px] font-bold text-black">AWS</span> Certified in Progress
-          </div>
-          <div class="absolute -left-6 bottom-[20%] glass rounded-full px-3 py-1.5 text-xs font-medium flex items-center gap-2 shadow-xl animate-float" style="animation-delay: -2s">
-            <span class="w-6 h-6 rounded-full bg-[#3670A0] flex items-center justify-center"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M12 0L1.5 6v12L12 24l10.5-6V6L12 0z"/></svg></span> Python • TensorFlow
+        
+        <!-- Exact About Me from your text -->
+        <div class="mt-8 glass rounded-[20px] p-6 space-y-3">
+          <h3 class="font-display font-semibold flex items-center gap-2">💫 About Me:</h3>
+          <div class="space-y-2.5 text-[14.5px] leading-6 text-[#cdd6f4]">
+            <p>🔭 I'm currently studying Bachelor in Information Technology (IT) in Model Institute of Technology (MIT).</p>
+            <p>👯 I'm looking for an internship in IT companies.</p>
+            <p>🤝 I'm looking for help with different IT companies to get experience.</p>
+            <p>🌱 I'm currently learning AWS Cloud architecture and AWS Cloud Operation.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- About -->
-  <section id="about" class="py-24 lg:py-32 relative">
-    <div class="max-w-[1200px] mx-auto px-6 lg:px-8">
-      <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20 items-start">
-        <div class="sticky top-28">
-          <div class="font-mono text-xs tracking-[0.2em] uppercase text-violet-300 mb-4">01 — About Me</div>
-          <h2 class="font-display text-[36px] lg:text-[48px] font-bold leading-[0.95] tracking-tight">
-            Passionate about building <span class="gradient-text">intelligent</span> future.
-          </h2>
-          <div class="mt-8 flex gap-3">
-            <a href="https://instagram.com/Ryan.chand.31" target="_blank" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white/10 transition group">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
-            </a>
-            <a href="https://linkedin.com/in/aashish-chand" target="_blank" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white/10 transition">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-            <a href="https://medium.com/@aashishchand" target="_blank" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white/10 transition">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
-            </a>
-            <a href="mailto:aashishchand1001@gmail.com" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white/10 transition">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </a>
-          </div>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#tech" class="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-medium text-[14px] hover:bg-white/90 transition">Explore My Stack →</a>
+          <a href="mailto:aashishchand1001@gmail.com" class="inline-flex items-center gap-2 glass rounded-full px-6 py-3 font-medium text-[14px] hover:bg-white/10 transition">Email Me</a>
         </div>
-        <div class="space-y-8">
-          <div class="glass rounded-[20px] p-8">
-            <p class="text-[18px] leading-8 text-[#cdd6f4]">
-              I'm a Bachelor in Information Technology student at Model Institute of Technology (MIT) Nepal, driven by curiosity for <span class="text-white font-medium">Artificial Intelligence, Machine Learning, and Cloud Computing</span>.
-            </p>
-            <p class="mt-6 text-[15px] leading-7 text-[#a6adc8]">
-              Currently diving deep into <span class="text-white">AWS Cloud Architecture & Operations</span>, Python ecosystem, and data-driven problem solving. I love building projects that bridge academic learning with real-world applications — from data warehousing concepts to travel tech.
-            </p>
-            <p class="mt-6 text-[15px] leading-7 text-[#a6adc8]">
-              Looking for internship opportunities where I can contribute, learn from experienced teams, and grow as an engineer. Let's connect if you're working on AI/ML, cloud, or data science!
-            </p>
-          </div>
 
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div class="glass rounded-2xl p-6">
-              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center mb-4">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-              </div>
-              <h4 class="font-display font-semibold">What I Do</h4>
-              <p class="mt-2 text-sm text-[#a6adc8] leading-6">Build ML prototypes, data pipelines, cloud-native apps and clean, accessible web experiences.</p>
-            </div>
-            <div class="glass rounded-2xl p-6">
-              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg>
-              </div>
-              <h4 class="font-display font-semibold">Currently Exploring</h4>
-              <p class="mt-2 text-sm text-[#a6adc8] leading-6">AWS Solutions Architect, TensorFlow advanced models, Data Warehouse & Mining, System Design.</p>
-            </div>
-          </div>
-
+        <!-- Socials with exact badges from your text -->
+        <div class="mt-8">
+          <h4 class="font-mono text-xs tracking-[0.2em] uppercase text-violet-300 mb-3">🌐 Socials</h4>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 glass rounded-full text-xs font-mono">📍 Nepal</span>
-            <span class="px-3 py-1.5 glass rounded-full text-xs font-mono">🎓 MIT Nepal - BIT</span>
-            <span class="px-3 py-1.5 glass rounded-full text-xs font-mono">💼 Open to Internships</span>
-            <span class="px-3 py-1.5 glass rounded-full text-xs font-mono">🌱 AWS Learner</span>
+            <a href="https://instagram.com/Ryan.chand.31" target="_blank" class="badge-shield"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white" alt="Instagram" /></a>
+            <a href="https://linkedin.com/in/aashish-chand" target="_blank" class="badge-shield"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+            <a href="https://medium.com/@aashishchand" target="_blank" class="badge-shield"><img src="https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white" alt="Medium" /></a>
+            <a href="mailto:aashishchand1001@gmail.com" class="badge-shield"><img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email" /></a>
+            <a href="https://github.com/aashish113399-sketch" target="_blank" class="badge-shield"><img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white" alt="GitHub" /></a>
           </div>
+        </div>
+      </div>
+
+      <!-- Code Card + Visit Count -->
+      <div class="relative">
+        <div class="absolute -inset-6 bg-gradient-to-br from-violet-600/20 to-cyan-500/20 blur-2xl rounded-[32px]"></div>
+        <div class="relative glass-strong rounded-[24px] overflow-hidden gradient-border">
+          <div class="flex items-center justify-between px-5 py-4 border-b border-white/10">
+            <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-red-500/80"></span><span class="w-3 h-3 rounded-full bg-yellow-500/80"></span><span class="w-3 h-3 rounded-full bg-green-500/80"></span></div>
+            <div class="font-mono text-xs text-[#a6adc8]">aashish@mit — portfolio</div>
+            <div class="w-6"></div>
+          </div>
+          <div class="p-6 font-mono text-[13px] leading-6">
+            <div class="text-[#a6adc8]"><span class="text-violet-400">➜</span> <span class="text-cyan-300">cat skills.txt</span></div>
+            <div class="mt-4 grid grid-cols-2 gap-2 text-[11px]">
+              <div class="glass rounded-lg p-2.5"><div class="text-[#6c7086]">LANG</div><div class="text-white mt-1">C, C++, Python, JS</div></div>
+              <div class="glass rounded-lg p-2.5"><div class="text-[#6c7086]">CLOUD</div><div class="text-white mt-1">AWS Arch & Ops</div></div>
+              <div class="glass rounded-lg p-2.5"><div class="text-[#6c7086]">WEB</div><div class="text-white mt-1">HTML5, CSS3, Vite</div></div>
+              <div class="glass rounded-lg p-2.5"><div class="text-[#6c7086]">TOOLS</div><div class="text-white mt-1">Docker, Git, Figma</div></div>
+            </div>
+            <div class="mt-6">
+              <img src="https://visitcount.itsvg.in/api?id=aashish113399-sketch&icon=0&color=6&label=Profile%20Views" alt="Visit count" class="rounded-lg" />
+            </div>
+            <div class="mt-4 flex gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-mono">● Internship Ready</span>
+              <span class="px-2.5 py-1 rounded-full bg-violet-500/20 text-violet-300 text-[11px] font-mono">MIT Nepal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating -->
+        <div class="absolute -right-4 top-[10%] glass rounded-full px-3 py-1.5 text-xs font-medium flex items-center gap-2 shadow-xl animate-float">
+          <span class="w-6 h-6 rounded-full bg-[#FF9900] flex items-center justify-center text-[10px] font-bold text-black">AWS</span> Learning
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="py-24 relative">
+  <!-- Tech Stack - EXACT from your text -->
+  <section id="tech" class="py-20 relative">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-8">
-      <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
-        <div>
-          <div class="font-mono text-xs tracking-[0.2em] uppercase text-violet-300 mb-4">02 — Tech Stack</div>
-          <h2 class="font-display text-[36px] lg:text-[48px] font-bold leading-[0.95]">Tools I build with</h2>
-        </div>
-        <p class="max-w-[360px] text-sm text-[#a6adc8] leading-6">A curated stack focused on AI/ML, cloud, and modern web — constantly evolving as I learn.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="font-mono text-xs tracking-[0.2em] uppercase text-violet-300 mb-4">💻 Tech Stack — From My Profile</div>
+      <h2 class="font-display text-[36px] lg:text-[44px] font-bold leading-[0.95] mb-8">Every tool I use</h2>
+      
+      <div class="glass-strong rounded-[24px] p-6 lg:p-8">
+        <p class="text-sm text-[#a6adc8] mb-6">Exact stack from my GitHub profile README — grouped for clarity:</p>
+        
         <!-- Languages -->
-        <div class="skill-card glass rounded-[20px] p-6 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-9 h-9 rounded-xl bg-[#1e1e2e] flex items-center justify-center">💻</div>
-            <h3 class="font-display font-semibold">Languages</h3>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#3670A0]"></span>Python</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">JavaScript</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">C / C++</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">SQL</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">HTML5 / CSS3</span>
-          </div>
-        </div>
-
-        <!-- AI / Data -->
-        <div class="skill-card glass rounded-[20px] p-6 transition-all duration-300 border-violet-500/20">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600/20 to-indigo-600/20 border border-violet-500/30 flex items-center justify-center">🤖</div>
-            <h3 class="font-display font-semibold">AI / Data Science</h3>
-            <span class="ml-auto text-[10px] px-2 py-1 rounded-full bg-violet-500/20 text-violet-300 font-mono">CORE</span>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-violet-500/20">TensorFlow</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Data Mining</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Data Warehousing</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Chart.js</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Pandas / NumPy</span>
+        <div class="mb-8">
+          <h3 class="font-display font-semibold mb-3 flex items-center gap-2"><span class="w-2 h-2 bg-violet-500 rounded-full"></span> Languages</h3>
+          <div class="flex flex-wrap gap-2.5">
+            <img class="badge-shield" src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="C" />
+            <img class="badge-shield" src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
+            <img class="badge-shield" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
+            <img class="badge-shield" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
+            <img class="badge-shield" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+            <img class="badge-shield" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
           </div>
         </div>
 
         <!-- Cloud & DevOps -->
-        <div class="skill-card glass rounded-[20px] p-6 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-9 h-9 rounded-xl bg-[#ff9900]/10 border border-[#ff9900]/20 flex items-center justify-center">☁️</div>
-            <h3 class="font-display font-semibold">Cloud & DevOps</h3>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-[#ff9900]/20">AWS Architecture</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">AWS Cloud Ops</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Docker</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">GitHub Actions</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Apache</span>
-          </div>
-        </div>
-
-        <!-- Frontend -->
-        <div class="skill-card glass rounded-[20px] p-6 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-9 h-9 rounded-xl bg-[#646CFF]/10 border border-[#646CFF]/20 flex items-center justify-center">⚡</div>
-            <h3 class="font-display font-semibold">Frontend</h3>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Vite</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Tailwind</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Responsive Design</span>
+        <div class="mb-8">
+          <h3 class="font-display font-semibold mb-3 flex items-center gap-2"><span class="w-2 h-2 bg-[#FF9900] rounded-full"></span> Cloud & DevOps</h3>
+          <div class="flex flex-wrap gap-2.5">
+            <img class="badge-shield" src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
+            <img class="badge-shield" src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+            <img class="badge-shield" src="https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white" alt="Apache" />
+            <img class="badge-shield" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+            <img class="badge-shield" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+            <img class="badge-shield" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+            <img class="badge-shield" src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
           </div>
         </div>
 
-        <!-- Backend / DB -->
-        <div class="skill-card glass rounded-[20px] p-6 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-9 h-9 rounded-xl bg-[#4479A1]/10 border border-[#4479A1]/20 flex items-center justify-center">🗄️</div>
-            <h3 class="font-display font-semibold">Backend & DB</h3>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">MySQL</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">REST APIs</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Postman</span>
+        <!-- Frontend & Tools -->
+        <div class="mb-8">
+          <h3 class="font-display font-semibold mb-3 flex items-center gap-2"><span class="w-2 h-2 bg-cyan-400 rounded-full"></span> Frontend, Data & Tools</h3>
+          <div class="flex flex-wrap gap-2.5">
+            <img class="badge-shield" src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+            <img class="badge-shield" src="https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white" alt="Chart.js" />
+            <img class="badge-shield" src="https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white" alt="Windows Terminal" />
+            <img class="badge-shield" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
+            <img class="badge-shield" src="https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139" alt="Portfolio" />
           </div>
         </div>
 
-        <!-- Tools -->
-        <div class="skill-card glass rounded-[20px] p-6 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">🎨</div>
-            <h3 class="font-display font-semibold">Tools & Design</h3>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Git / GitHub</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Figma</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Canva</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Notion / Trello</span>
-            <span class="px-3 py-1.5 bg-[#232334] rounded-full text-xs font-medium border border-white/10">Lightroom</span>
+        <!-- Design & Productivity -->
+        <div>
+          <h3 class="font-display font-semibold mb-3 flex items-center gap-2"><span class="w-2 h-2 bg-pink-400 rounded-full"></span> Design & Productivity</h3>
+          <div class="flex flex-wrap gap-2.5">
+            <img class="badge-shield" src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
+            <img class="badge-shield" src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white" alt="Canva" />
+            <img class="badge-shield" src="https://img.shields.io/badge/Adobe%20Lightroom-31A8FF.svg?style=for-the-badge&logo=Adobe%20Lightroom&logoColor=white" alt="Lightroom" />
+            <img class="badge-shield" src="https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white" alt="Notion" />
+            <img class="badge-shield" src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white" alt="Trello" />
+            <img class="badge-shield" src="https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white" alt="Meta" />
           </div>
         </div>
+
+        <div class="mt-8 pt-6 border-t border-white/10 text-xs font-mono text-[#6c7086]">
+          Total: 23 technologies • Inspired by your GPRM profile • Always learning more
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Stats - Exact from your text -->
+  <section id="stats" class="py-20 relative">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-8">
+      <div class="font-mono text-xs tracking-[0.2em] uppercase text-cyan-300 mb-4">📊 GitHub Stats</div>
+      <h2 class="font-display text-[32px] font-bold mb-8">My GitHub journey</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-[20px] p-4 flex justify-center">
+          <img src="https://github-readme-stats.vercel.app/api?username=aashish113399-sketch&theme=tokyonight&hide_border=false&include_all_commits=false&count_private=false" alt="GitHub Stats" class="rounded-xl w-full max-w-[400px]" />
+        </div>
+        <div class="glass rounded-[20px] p-4 flex justify-center">
+          <img src="https://nirzak-streak-stats.vercel.app/?user=aashish113399-sketch&theme=tokyonight&hide_border=false" alt="Streak Stats" class="rounded-xl w-full max-w-[400px]" />
+        </div>
+        <div class="glass rounded-[20px] p-4 flex justify-center md:col-span-2">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aashish113399-sketch&theme=tokyonight&hide_border=false&include_all_commits=false&count_private=false&layout=compact" alt="Top Langs" class="rounded-xl w-full max-w-[400px]" />
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center gap-4 justify-center">
+        <img src="https://visitcount.itsvg.in/api?id=aashish113399-sketch&icon=0&color=6" alt="Visit count" class="rounded-full" />
+        <span class="text-xs font-mono text-[#a6adc8]">Profile views • Updated live</span>
       </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="py-24 relative">
+  <section id="projects" class="py-20 relative">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-8">
-      <div class="flex items-end justify-between gap-6 mb-12 flex-wrap">
-        <div>
-          <div class="font-mono text-xs tracking-[0.2em] uppercase text-violet-300 mb-4">03 — Selected Works</div>
-          <h2 class="font-display text-[36px] lg:text-[48px] font-bold leading-[0.95]">Projects that<br>teach & inspire</h2>
-        </div>
-        <a href="https://github.com/aashish113399-sketch" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium text-[#a6adc8] hover:text-white transition">
-          View all on GitHub <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-        </a>
-      </div>
-
+      <div class="font-mono text-xs tracking-[0.2em] uppercase text-violet-300 mb-4">🚀 Projects</div>
+      <h2 class="font-display text-[36px] font-bold mb-8">What I've built</h2>
+      
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Project 1: Travel Buddy -->
-        <div class="project-card group glass rounded-[20px] overflow-hidden">
-          <div class="relative h-[200px] overflow-hidden bg-gradient-to-br from-violet-600/20 to-cyan-500/20">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-[80%] h-[70%] glass-strong rounded-xl p-4 rotate-1 group-hover:rotate-0 transition-transform duration-500">
-                <div class="flex items-center gap-2 mb-3"><span class="w-2 h-2 rounded-full bg-emerald-400"></span><span class="text-[10px] font-mono text-[#a6adc8]">travel-buddy • live</span></div>
-                <div class="space-y-2">
-                  <div class="h-2 bg-white/20 rounded-full w-[80%]"></div>
-                  <div class="h-2 bg-white/10 rounded-full w-[60%]"></div>
-                  <div class="mt-4 grid grid-cols-3 gap-2"><div class="h-12 bg-white/10 rounded-lg"></div><div class="h-12 bg-white/10 rounded-lg"></div><div class="h-12 bg-gradient-to-br from-violet-500 to-cyan-500 rounded-lg"></div></div>
-                </div>
-              </div>
-            </div>
-            <div class="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur text-[10px] font-mono">2024 • Web App</div>
+        <div class="glass rounded-[20px] p-6 hover:border-violet-500/30 transition-all hover:-translate-y-1">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center mb-4">✈️</div>
+          <h3 class="font-display font-semibold">Travel Buddy</h3>
+          <p class="mt-2 text-sm text-[#a6adc8] leading-6">Smart travel companion — built with HTML5, CSS3, JavaScript, Vite</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E" class="h-5" />
+            <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white" class="h-5" />
           </div>
-          <div class="p-6">
-            <h3 class="font-display font-semibold text-[18px]">Travel Buddy</h3>
-            <p class="mt-2 text-sm text-[#a6adc8] leading-6">Smart travel companion to discover places, plan itineraries and keep memories — built with modern web stack.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10">JavaScript</span>
-              <span class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10">HTML/CSS</span>
-              <span class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10">Vite</span>
-            </div>
-            <div class="mt-5 flex gap-3">
-              <a href="https://github.com/aashish113399-sketch/travel-buddy" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-medium hover:text-violet-300 transition">Code <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
-              <a href="#" class="inline-flex items-center gap-1.5 text-sm font-medium text-[#a6adc8]">Live demo — soon</a>
-            </div>
-          </div>
+          <a href="https://github.com/aashish113399-sketch/travel-buddy" target="_blank" class="mt-4 inline-flex text-sm font-medium text-violet-300 hover:text-white">View Code →</a>
         </div>
 
-        <!-- Project 2: DWDW -->
-        <div class="project-card group glass rounded-[20px] overflow-hidden">
-          <div class="relative h-[200px] overflow-hidden bg-gradient-to-br from-amber-500/20 to-orange-600/20">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="font-mono text-xs p-4 w-[90%]">
-                <div class="glass rounded-lg p-3">
-                  <div class="text-[#a6adc8]">import <span class="text-violet-300">pandas</span> as pd</div>
-                  <div class="text-[#a6adc8]">df = pd.<span class="text-cyan-300">read_csv</span>(<span class="text-green-300">"warehouse.csv"</span>)</div>
-                  <div class="mt-2 h-16 rounded bg-gradient-to-r from-amber-500/20 to-orange-500/20 flex items-end gap-1 p-2"><div class="w-1/6 h-[30%] bg-amber-400 rounded"></div><div class="w-1/6 h-[60%] bg-amber-400 rounded"></div><div class="w-1/6 h-[90%] bg-orange-400 rounded"></div><div class="w-1/6 h-[50%] bg-amber-400 rounded"></div><div class="w-1/6 h-[80%] bg-orange-400 rounded"></div></div>
-                </div>
-              </div>
-            </div>
-            <div class="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur text-[10px] font-mono">Jupyter • Academic</div>
+        <div class="glass rounded-[20px] p-6 hover:border-amber-500/30 transition-all hover:-translate-y-1">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-4">📊</div>
+          <h3 class="font-display font-semibold">Data Warehouse & Mining</h3>
+          <p class="mt-2 text-sm text-[#a6adc8] leading-6">ETL, OLAP, clustering — Python, MySQL, Chart.js</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <img src="https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54" class="h-5" />
+            <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=flat&logo=mysql&logoColor=white" class="h-5" />
           </div>
-          <div class="p-6">
-            <h3 class="font-display font-semibold text-[18px]">Data Warehouse & Data Mining</h3>
-            <p class="mt-2 text-sm text-[#a6adc8] leading-6">End-to-end DWDM lab: ETL pipelines, OLAP cubes, clustering, classification and visualization with Python notebooks.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10">Python</span>
-              <span class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10">Jupyter</span>
-              <span class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10">MySQL</span>
-            </div>
-            <div class="mt-5 flex gap-3">
-              <a href="https://github.com/aashish113399-sketch/Data_Warehouse_Data_Mining" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-medium hover:text-violet-300 transition">Notebooks <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
-            </div>
-          </div>
+          <a href="https://github.com/aashish113399-sketch/Data_Warehouse_Data_Mining" target="_blank" class="mt-4 inline-flex text-sm font-medium text-amber-300 hover:text-white">View Notebooks →</a>
         </div>
 
-        <!-- Project 3: Portfolio -->
-        <div class="project-card group glass rounded-[20px] overflow-hidden ring-1 ring-violet-500/30">
-          <div class="relative h-[200px] overflow-hidden bg-gradient-to-br from-violet-600/30 to-indigo-600/30">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-32 h-32 rounded-full bg-gradient-to-br from-white to-white/50 blur-[1px] flex items-center justify-center font-display font-bold text-black text-xl shadow-2xl">AC</div>
-            </div>
-            <div class="absolute bottom-3 left-3 right-3 glass rounded-xl px-3 py-2 flex items-center justify-between text-xs">
-              <span class="font-mono">aashish.dev</span><span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-            </div>
-            <div class="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-violet-600 text-[10px] font-mono text-white">Featured • 2026</div>
+        <div class="glass rounded-[20px] p-6 ring-1 ring-violet-500/30 hover:-translate-y-1 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-cyan-500 flex items-center justify-center mb-4 font-bold text-white">AC</div>
+          <h3 class="font-display font-semibold">This Portfolio</h3>
+          <p class="mt-2 text-sm text-[#a6adc8] leading-6">Built from scratch — Tailwind, GitHub Pages, all 23 tech badges</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <img src="https://img.shields.io/badge/Portfolio-%23000000.svg?style=flat&logo=firefox&logoColor=#FF7139" class="h-5" />
+            <img src="https://img.shields.io/badge/github-%23121011.svg?style=flat&logo=github&logoColor=white" class="h-5" />
           </div>
-          <div class="p-6">
-            <h3 class="font-display font-semibold text-[18px]">Personal Portfolio — This Site</h3>
-            <p class="mt-2 text-sm text-[#a6adc8] leading-6">Designed & built from scratch: glassmorphism, animations, responsive, SEO optimized. Hosted on GitHub Pages.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="text-[11px] px-2 py-1 rounded-full bg-violet-500/20 border border-violet-500/30 text-violet-200">Tailwind</span>
-              <span class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10">Modern JS</span>
-              <span class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10">GitHub Pages</span>
-            </div>
-            <div class="mt-5 flex gap-3">
-              <a href="https://github.com/aashish113399-sketch/Portifilo" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-medium hover:text-violet-300 transition">Source <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
-              <span class="text-sm text-[#a6adc8]">You are here ✨</span>
-            </div>
-          </div>
+          <span class="mt-4 inline-flex text-sm text-[#a6adc8]">You are here ✨</span>
         </div>
-      </div>
-
-      <!-- More Projects CTA -->
-      <div class="mt-8 glass rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">🚀</div>
-          <div><div class="font-medium">More experiments on GitHub</div><div class="text-sm text-[#a6adc8]">Including first repo, intro to GitHub, profile README</div></div>
-        </div>
-        <a href="https://github.com/aashish113399-sketch?tab=repositories" target="_blank" class="px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition whitespace-nowrap">Explore Repositories</a>
       </div>
     </div>
   </section>
 
-  <!-- Education & Experience -->
-  <section id="education" class="py-24 relative">
-    <div class="max-w-[1200px] mx-auto px-6 lg:px-8 grid lg:grid-cols-[1fr_1fr] gap-12">
-      <div>
-        <div class="font-mono text-xs tracking-[0.2em] uppercase text-violet-300 mb-4">04 — Education</div>
-        <h2 class="font-display text-[32px] font-bold leading-tight mb-8">Learning journey</h2>
-        <div class="relative pl-8 border-l border-white/10 space-y-10">
-          <div class="absolute left-[-5px] top-0 w-[9px] h-[9px] rounded-full bg-violet-500 shadow-[0_0_10px_rgba(124,58,237,0.8)]"></div>
-          
-          <div class="relative">
-            <div class="absolute left-[-37px] top-1 w-3 h-3 rounded-full bg-[#181825] border-2 border-violet-500"></div>
-            <div class="glass rounded-2xl p-6">
-              <div class="flex items-start justify-between gap-4">
-                <div>
-                  <h3 class="font-display font-semibold">Bachelor in Information Technology</h3>
-                  <p class="text-sm text-violet-300 mt-1">Model Institute of Technology (MIT) Nepal</p>
-                </div>
-                <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-mono">2023 — Present</span>
-              </div>
-              <p class="mt-4 text-sm text-[#a6adc8] leading-6">Focused on software engineering, data structures, DBMS, data warehousing & mining, AI/ML fundamentals, cloud computing and system design.</p>
-              <div class="mt-4 flex gap-2 flex-wrap">
-                <span class="text-[11px] px-2 py-1 rounded-full bg-white/5">CGPA: In Progress</span>
-                <span class="text-[11px] px-2 py-1 rounded-full bg-white/5">Dean's List • Active Learner</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative">
-            <div class="absolute left-[-37px] top-1 w-3 h-3 rounded-full bg-[#181825] border-2 border-white/20"></div>
-            <div class="glass rounded-2xl p-6 opacity-80">
-              <div class="flex items-start justify-between gap-4">
-                <div>
-                  <h3 class="font-display font-semibold">AWS Cloud Learning Path</h3>
-                  <p class="text-sm text-[#a6adc8] mt-1">Self-driven • AWS Training</p>
-                </div>
-                <span class="px-2.5 py-1 rounded-full bg-[#ff9900]/20 text-[#ff9900] text-[11px] font-mono">2025 — Present</span>
-              </div>
-              <p class="mt-4 text-sm text-[#a6adc8] leading-6">Learning AWS Cloud Architecture & Operations — EC2, S3, IAM, VPC, Lambda, CloudFormation. Goal: Solutions Architect Associate.</p>
-            </div>
-          </div>
+  <!-- Donate & About Footer -->
+  <section class="py-20 relative">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-8">
+      <div class="glass-strong rounded-[24px] p-8">
+        <h3 class="font-display text-xl font-bold mb-4">🎓 Education & Goals</h3>
+        <div class="space-y-4 text-sm leading-6 text-[#a6adc8]">
+          <p><span class="text-white font-medium">Bachelor in IT</span> @ Model Institute of Technology (MIT) Nepal — 2023-Present</p>
+          <p>🔭 Learning: <span class="text-white">AWS Cloud Architecture & Operations</span> — EC2, S3, IAM, VPC, Lambda</p>
+          <p>👯 Seeking: Internship in IT companies to gain real experience</p>
+          <p>🤝 Open to: Collaboration, mentorship, freelance</p>
+        </div>
+        <div class="mt-6 flex gap-2">
+          <span class="px-3 py-1 glass rounded-full text-xs font-mono">📍 Nepal</span>
+          <span class="px-3 py-1 glass rounded-full text-xs font-mono">💼 Internship Ready</span>
         </div>
       </div>
 
-      <div>
-        <div class="font-mono text-xs tracking-[0.2em] uppercase text-cyan-300 mb-4">05 — What I'm Looking For</div>
-        <h2 class="font-display text-[32px] font-bold leading-tight mb-8">Open to internships</h2>
-        <div class="space-y-4">
-          <div class="glass rounded-2xl p-6 flex gap-4">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center shrink-0">🎯</div>
-            <div><h4 class="font-semibold">AI/ML Intern</h4><p class="text-sm text-[#a6adc8] mt-1 leading-6">Work on real datasets, model training, evaluation and deployment. Python, TensorFlow, data pipelines.</p></div>
-          </div>
-          <div class="glass rounded-2xl p-6 flex gap-4">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shrink-0">☁️</div>
-            <div><h4 class="font-semibold">Cloud / DevOps Intern</h4><p class="text-sm text-[#a6adc8] mt-1 leading-6">Help build scalable infra on AWS, CI/CD, Docker, monitoring and cost optimization.</p></div>
-          </div>
-          <div class="glass rounded-2xl p-6 flex gap-4">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-fuchsia-500 to-violet-600 flex items-center justify-center shrink-0">💡</div>
-            <div><h4 class="font-semibold">Full-Stack / Data Intern</h4><p class="text-sm text-[#a6adc8] mt-1 leading-6">Build user-facing features, dashboards, data visualization with modern JS and Python.</p></div>
-          </div>
-
-          <div class="mt-8 glass-strong rounded-2xl p-6 border border-violet-500/20">
-            <div class="flex items-center gap-2 text-sm font-medium"><span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span> Available immediately • Remote / On-site Nepal</div>
-            <p class="mt-3 text-sm text-[#a6adc8]">Based in Nepal, open to remote global teams. Quick learner, strong communicator, passionate about shipping.</p>
-            <a href="mailto:aashishchand1001@gmail.com?subject=Internship%20Opportunity" class="mt-4 inline-flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/90 transition">Let's talk <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </div>
+      <div class="glass rounded-[24px] p-8">
+        <h3 class="font-display text-xl font-bold mb-4">💰 Support My Work</h3>
+        <p class="text-sm text-[#a6adc8] leading-6 mb-6">If you like my projects and want to support my learning journey — buying me a coffee helps a lot! Every support motivates me to build more.</p>
+        <a href="https://buymeacoffee.com/" target="_blank" class="inline-flex">
+          <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="BuyMeACoffee" class="badge-shield" />
+        </a>
+        <div class="mt-8 pt-6 border-t border-white/10">
+          <p class="text-xs font-mono text-[#6c7086]">Proudly created with GPRM (https://gprm.itsvg.in) — adapted into modern portfolio</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-24 relative">
+  <section id="contact" class="py-20">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-8">
-      <div class="glass-strong rounded-[32px] overflow-hidden relative">
-        <div class="absolute inset-0 bg-gradient-to-br from-violet-600/10 to-cyan-500/10 pointer-events-none"></div>
-        <div class="relative grid lg:grid-cols-[1.1fr_0.9fr] gap-0">
-          <div class="p-8 lg:p-12">
-            <div class="font-mono text-xs tracking-[0.2em] uppercase text-violet-300 mb-4">06 — Get In Touch</div>
-            <h2 class="font-display text-[36px] lg:text-[48px] font-bold leading-[0.9]">Let's build<br>something<br><span class="gradient-text">amazing</span></h2>
-            <p class="mt-6 text-[#a6adc8] leading-7 max-w-[420px]">Have an internship, freelance project, or just want to chat about AI/ML and cloud? My inbox is open.</p>
-            
-            <div class="mt-10 space-y-4">
-              <a href="mailto:aashishchand1001@gmail.com" class="flex items-center gap-4 group">
-                <div class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-105 transition"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-                <div><div class="text-xs font-mono text-[#a6adc8] uppercase">Email</div><div class="font-medium">aashishchand1001@gmail.com</div></div>
-              </a>
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full glass flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                <div><div class="text-xs font-mono text-[#a6adc8] uppercase">Location</div><div class="font-medium">Nepal • Remote Worldwide</div></div>
-              </div>
-            </div>
-
-            <div class="mt-10 flex gap-3">
-              <a href="https://github.com/aashish113399-sketch" target="_blank" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white hover:text-black transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-              <a href="https://linkedin.com/in/aashish-chand" target="_blank" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white hover:text-black transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-              <a href="https://instagram.com/Ryan.chand.31" target="_blank" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white hover:text-black transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a>
-            </div>
-          </div>
-
-          <div class="p-8 lg:p-12 bg-[#0a0a0f]/50">
-            <form id="contact-form" class="space-y-5">
-              <div class="grid sm:grid-cols-2 gap-4">
-                <div><label class="text-xs font-mono uppercase text-[#a6adc8]">Name</label><input required type="text" placeholder="Your name" class="mt-2 w-full bg-[#181825] border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 transition" /></div>
-                <div><label class="text-xs font-mono uppercase text-[#a6adc8]">Email</label><input required type="email" placeholder="you@company.com" class="mt-2 w-full bg-[#181825] border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 transition" /></div>
-              </div>
-              <div><label class="text-xs font-mono uppercase text-[#a6adc8]">Subject</label><input type="text" placeholder="Internship / Project / Collaboration" class="mt-2 w-full bg-[#181825] border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 transition" /></div>
-              <div><label class="text-xs font-mono uppercase text-[#a6adc8]">Message</label><textarea required rows="5" placeholder="Tell me about your idea..." class="mt-2 w-full bg-[#181825] border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 transition resize-none"></textarea></div>
-              <button type="submit" class="w-full bg-white text-black rounded-xl py-3.5 font-medium text-sm hover:bg-white/90 transition flex items-center justify-center gap-2 group">
-                Send Message <span class="group-hover:translate-x-0.5 transition-transform">→</span>
-              </button>
-              <p class="text-[11px] text-center text-[#6c7086] font-mono">Form opens your email client — no data stored • Direct: aashishchand1001@gmail.com</p>
-            </form>
-          </div>
+      <div class="glass-strong rounded-[32px] p-8 lg:p-12 text-center">
+        <h2 class="font-display text-[36px] font-bold">Let's build <span class="gradient-text">something</span> amazing</h2>
+        <p class="mt-4 text-[#a6adc8] max-w-[500px] mx-auto">Have an internship, project, or idea? My inbox is open — aashishchand1001@gmail.com</p>
+        <div class="mt-8 flex flex-wrap gap-3 justify-center">
+          <a href="mailto:aashishchand1001@gmail.com" class="px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-white/90 transition">Email Me</a>
+          <a href="https://github.com/aashish113399-sketch" target="_blank" class="px-6 py-3 rounded-full glass font-medium hover:bg-white/10 transition">GitHub</a>
+          <a href="https://linkedin.com/in/aashish-chand" target="_blank" class="px-6 py-3 rounded-full glass font-medium hover:bg-white/10 transition">LinkedIn</a>
+        </div>
+        <div class="mt-8 flex justify-center gap-2 flex-wrap">
+          <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" />
+          <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white" />
+          <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-10 border-t border-white/10">
-    <div class="max-w-[1200px] mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-500 flex items-center justify-center font-bold text-white text-xs">AC</div>
-        <span class="font-mono text-[#a6adc8]">© 2026 Aashish Chand • Built with passion in Nepal 🇳🇵</span>
-      </div>
-      <div class="flex items-center gap-6 font-mono text-xs text-[#6c7086]">
-        <span>MIT Nepal • BIT</span>
-        <span class="w-1 h-1 bg-white/20 rounded-full"></span>
-        <span id="local-time">--:-- --</span>
-      </div>
+  <footer class="py-8 border-t border-white/10 text-center">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-mono text-[#6c7086]">
+      <span>© 2026 Aashish Chand • MIT Nepal • Built with 23 tech badges 🇳🇵</span>
+      <span id="local-time">--:-- NPT</span>
     </div>
   </footer>
 
   <script>
-    // Mobile menu
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
     btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
-
-    // Navbar blur on scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) {
-        navbar.classList.add('glass-strong', 'shadow-[0_8px_32px_rgba(0,0,0,0.4)]');
-      } else {
-        navbar.classList.remove('glass-strong', 'shadow-[0_8px_32px_rgba(0,0,0,0.4)]');
-      }
+      if (window.scrollY > 20) navbar.classList.add('glass-strong','shadow-[0_8px_32px_rgba(0,0,0,0.4)]');
+      else navbar.classList.remove('glass-strong','shadow-[0_8px_32px_rgba(0,0,0,0.4)]');
     });
-
-    // Typing effect
-    const texts = ['python main.py --build-future', 'aws cloud architect • in progress', 'open to internships 2026', 'npm run create-impact'];
-    let idx = 0, charIdx = 0, deleting = false;
-    const typedEl = document.getElementById('typed-text');
-    function typeLoop() {
-      const current = texts[idx];
-      if (!deleting) {
-        typedEl.textContent = current.slice(0, charIdx++);
-        if (charIdx > current.length + 8) deleting = true;
-      } else {
-        typedEl.textContent = current.slice(0, charIdx--);
-        if (charIdx < 0) { deleting = false; idx = (idx+1)%texts.length; charIdx=0; }
-      }
-      setTimeout(typeLoop, deleting ? 40 : 90);
-    }
-    typeLoop();
-
-    // Contact form -> mailto
-    document.getElementById('contact-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const form = e.target;
-      const name = form.querySelector('input[type=text]').value;
-      const email = form.querySelector('input[type=email]').value;
-      const subject = form.querySelectorAll('input[type=text]')[1].value || 'Portfolio Contact';
-      const message = form.querySelector('textarea').value;
-      const body = `Hi Aashish,%0D%0A%0D%0A${encodeURIComponent(message)}%0D%0A%0D%0AFrom: ${encodeURIComponent(name)} (${encodeURIComponent(email)})`;
-      window.location.href = `mailto:aashishchand1001@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-    });
-
-    // Local time Nepal
-    function updateTime() {
-      try {
-        const now = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kathmandu', hour: '2-digit', minute: '2-digit', hour12: true });
+    function updateTime(){
+      try{
+        const now = new Date().toLocaleTimeString('en-US',{timeZone:'Asia/Kathmandu',hour:'2-digit',minute:'2-digit',hour12:true});
         document.getElementById('local-time').textContent = now + ' NPT';
-      } catch {}
+      }catch{}
     }
-    setInterval(updateTime, 1000); updateTime();
-
-    // Smooth reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('opacity-100', 'translate-y-0');
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.glass, .project-card, .skill-card').forEach(el => {
-      el.classList.add('transition-all', 'duration-700');
-      observer.observe(el);
-    });
+    setInterval(updateTime,1000); updateTime();
   </script>
 </body>
 </html>
