@@ -64,6 +64,21 @@
           var(--bg);
         color: var(--text);
         font-family: 'Inter', sans-serif;
+        min-height: 100vh;
+      }
+
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(120deg, rgba(255,255,255,0.02), transparent 40%, rgba(255,255,255,0.01));
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      ::selection {
+        background: rgba(139, 92, 246, 0.4);
+        color: #fff;
       }
 
       .section-shell {
@@ -71,15 +86,17 @@
       }
 
       .glass {
-        background: rgba(15, 23, 42, 0.65);
+        background: rgba(15, 23, 42, 0.66);
         border: 1px solid rgba(148, 163, 184, 0.18);
         backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
       }
 
       .glass-strong {
         background: rgba(15, 23, 42, 0.9);
         border: 1px solid rgba(148, 163, 184, 0.18);
         backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
       }
 
       .gradient-text {
@@ -101,18 +118,88 @@
       }
 
       .hover-lift {
-        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
       }
 
       .hover-lift:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
-        border-color: rgba(167, 139, 250, 0.5);
+        transform: translateY(-6px);
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.42);
+        border-color: rgba(167, 139, 250, 0.55);
+      }
+
+      .cta-primary {
+        background: linear-gradient(135deg, rgba(255,255,255,1), rgba(214, 228, 255, 0.92));
+        color: #0b1120;
+        box-shadow: 0 12px 30px rgba(167, 139, 250, 0.34);
+      }
+
+      .cta-secondary {
+        background: rgba(15, 23, 42, 0.45);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+      }
+
+      .soft-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .soft-card::after {
+        content: '';
+        position: absolute;
+        inset: -30% auto auto -20%;
+        width: 180px;
+        height: 180px;
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.18), transparent 70%);
+        pointer-events: none;
+      }
+
+      .ambient-orb {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(90px);
+        opacity: 0.5;
+        pointer-events: none;
+        animation: floatOrb 10s ease-in-out infinite alternate;
+      }
+
+      @keyframes floatOrb {
+        0% {
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+        100% {
+          transform: translate3d(18px, -18px, 0) scale(1.12);
+        }
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(26px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .reveal,
+        .hover-lift,
+        .ambient-orb {
+          transition: none;
+          animation: none;
+        }
       }
     </style>
   </head>
   <body class="antialiased">
     <div class="fixed inset-0 -z-10 grid-pattern opacity-60"></div>
+    <div class="ambient-orb left-[-30px] top-20 h-44 w-44 bg-violet-500/30"></div>
+    <div class="ambient-orb right-[-30px] top-40 h-52 w-52 bg-cyan-500/25"></div>
 
     <nav id="navbar" class="sticky top-0 z-50 border-b border-white/5 bg-slate-950/55 backdrop-blur-xl">
       <div class="section-shell flex items-center justify-between h-20">
@@ -130,7 +217,7 @@
           <a href="#focus" class="rounded-full px-4 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white">Focus</a>
           <a href="#projects" class="rounded-full px-4 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white">Projects</a>
           <a href="#education" class="rounded-full px-4 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white">Education</a>
-          <a href="#contact" class="rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-900 transition hover:bg-slate-200">Contact</a>
+          <a href="#contact" class="cta-primary rounded-full px-4 py-2 text-sm font-medium text-slate-900 transition hover:brightness-110">Contact</a>
         </div>
 
         <button id="menuToggle" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 md:hidden" aria-label="Toggle menu">
@@ -155,7 +242,7 @@
       <section class="section-shell relative py-16 md:py-24">
         <div class="absolute inset-x-0 top-10 -z-10 mx-auto h-72 w-72 rounded-full bg-violet-500/20 blur-[120px]"></div>
         <div class="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
+          <div class="reveal">
             <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-cyan-200">
               <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
               Open to internships • Remote friendly
@@ -173,20 +260,20 @@
             </p>
 
             <div class="mt-8 flex flex-wrap gap-3">
-              <a href="#projects" class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-200">View Projects</a>
-              <a href="mailto:aashishchand1001@gmail.com" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-violet-400/50 hover:bg-violet-500/10">Email Me</a>
+              <a href="#projects" class="cta-primary rounded-full px-6 py-3 text-sm font-semibold text-slate-900 transition hover:scale-[1.02]">View Projects</a>
+              <a href="mailto:aashishchand1001@gmail.com" class="cta-secondary rounded-full px-6 py-3 text-sm font-semibold text-white transition hover:border-violet-400/50 hover:text-violet-100">Hire Me</a>
             </div>
 
             <div class="mt-8 flex flex-wrap items-center gap-3 text-sm text-slate-300">
-              <a href="https://github.com/aashish113399-sketch" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 hover:border-cyan-400/40 hover:text-white">GitHub</a>
-              <a href="https://linkedin.com/in/aashish-chand" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 hover:border-cyan-400/40 hover:text-white">LinkedIn</a>
-              <a href="https://medium.com/@aashishchand" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 hover:border-cyan-400/40 hover:text-white">Medium</a>
+              <a href="https://github.com/aashish113399-sketch" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 transition hover:border-violet-400/50 hover:text-white">GitHub</a>
+              <a href="https://linkedin.com/in/aashish-chand" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 transition hover:border-violet-400/50 hover:text-white">LinkedIn</a>
+              <a href="https://medium.com/@aashishchand" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 transition hover:border-violet-400/50 hover:text-white">Medium</a>
             </div>
           </div>
 
-          <div class="relative">
+          <div class="relative reveal">
             <div class="absolute -inset-5 rounded-[32px] bg-gradient-to-br from-violet-500/20 via-cyan-500/10 to-transparent blur-2xl"></div>
-            <div class="glass-strong relative overflow-hidden rounded-[28px] border border-white/10 shadow-soft">
+            <div class="glass-strong soft-card relative overflow-hidden rounded-[28px] border border-white/10 shadow-soft">
               <div class="flex items-center justify-between border-b border-white/10 px-5 py-4">
                 <div class="flex gap-2">
                   <span class="h-3 w-3 rounded-full bg-red-400"></span>
@@ -239,22 +326,22 @@
 
       <section class="section-shell py-8 md:py-14">
         <div class="grid gap-5 md:grid-cols-4">
-          <div class="glass hover-lift rounded-2xl p-5">
+          <div class="glass hover-lift rounded-2xl p-5 reveal">
             <div class="text-sm text-slate-400">Education</div>
             <div class="mt-3 text-2xl font-bold text-white">BIT</div>
             <div class="mt-2 text-sm text-slate-300">MIT Nepal</div>
           </div>
-          <div class="glass hover-lift rounded-2xl p-5">
+          <div class="glass hover-lift rounded-2xl p-5 reveal">
             <div class="text-sm text-slate-400">Focus</div>
             <div class="mt-3 text-2xl font-bold text-white">AI/ML</div>
             <div class="mt-2 text-sm text-slate-300">Learning by building</div>
           </div>
-          <div class="glass hover-lift rounded-2xl p-5">
+          <div class="glass hover-lift rounded-2xl p-5 reveal">
             <div class="text-sm text-slate-400">Cloud</div>
             <div class="mt-3 text-2xl font-bold text-white">AWS</div>
             <div class="mt-2 text-sm text-slate-300">Architecture & operations</div>
           </div>
-          <div class="glass hover-lift rounded-2xl p-5">
+          <div class="glass hover-lift rounded-2xl p-5 reveal">
             <div class="text-sm text-slate-400">Goal</div>
             <div class="mt-3 text-2xl font-bold text-white">Internship</div>
             <div class="mt-2 text-sm text-slate-300">Software + data roles</div>
@@ -263,25 +350,25 @@
       </section>
 
       <section id="about" class="section-shell py-16 md:py-20">
-        <div class="mb-10 max-w-2xl">
+        <div class="mb-10 max-w-2xl reveal">
           <div class="text-xs font-medium uppercase tracking-[0.22em] text-violet-300">About Me</div>
           <h2 class="section-title mt-4 text-3xl font-bold md:text-5xl">Curious, self-driven, and focused on practical growth.</h2>
         </div>
 
         <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-          <div class="glass-strong rounded-[28px] p-6 md:p-8">
+          <div class="glass-strong rounded-[28px] p-6 md:p-8 reveal">
             <p class="text-base leading-8 text-slate-300">
-              I am currently pursuing a Bachelor in Information Technology at Model Institute of Technology (MIT), Nepal. I enjoy learning through hands-on projects and understanding how modern digital products work behind the scenes.
+              I am currently pursuing a Bachelor in Information Technology at Model Institute of Technology (MIT), Nepal. I enjoy learning through hands-on projects and understanding how modern digital systems are built and improved.
             </p>
             <p class="mt-5 text-base leading-8 text-slate-300">
-              My interests include <span class="text-white font-medium">machine learning, cloud platforms, data analysis, and application development.</span> I am currently strengthening my fundamentals in Python, cloud architecture, data warehousing, and web-based product development while building projects that solve real problems.
+              My interests include <span class="text-white font-medium">machine learning, cloud platforms, data analysis, and application development.</span> I am currently strengthening my fundamentals in Python, system design, and analytics while continuing to explore real-world application design.
             </p>
             <p class="mt-5 text-base leading-8 text-slate-300">
               I am actively looking for internship opportunities where I can contribute, learn, and grow in the environment of software engineering, AI, or cloud-based development.
             </p>
           </div>
 
-          <div class="glass rounded-[28px] p-6 md:p-8">
+          <div class="glass rounded-[28px] p-6 md:p-8 reveal">
             <div class="text-xs font-medium uppercase tracking-[0.2em] text-cyan-300">Highlights</div>
             <ul class="mt-5 space-y-4 text-sm text-slate-200">
               <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-violet-400"></span><span>Learning AWS Cloud Architecture and Operations</span></li>
@@ -294,31 +381,31 @@
       </section>
 
       <section id="focus" class="section-shell py-16 md:py-20">
-        <div class="mb-10 max-w-2xl">
+        <div class="mb-10 max-w-2xl reveal">
           <div class="text-xs font-medium uppercase tracking-[0.22em] text-cyan-300">Core Strengths</div>
           <h2 class="section-title mt-4 text-3xl font-bold md:text-5xl">What I am building expertise in.</h2>
         </div>
 
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          <div class="glass hover-lift rounded-[24px] p-6">
+          <div class="glass hover-lift rounded-[24px] p-6 reveal">
             <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-500/15 text-2xl">🤖</div>
             <h3 class="text-xl font-semibold text-white">AI & ML</h3>
             <p class="mt-3 text-sm leading-7 text-slate-300">Exploring machine learning workflows, model thinking, and practical use cases with Python and data-driven experimentation.</p>
           </div>
 
-          <div class="glass hover-lift rounded-[24px] p-6">
+          <div class="glass hover-lift rounded-[24px] p-6 reveal">
             <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/15 text-2xl">☁️</div>
             <h3 class="text-xl font-semibold text-white">Cloud</h3>
             <p class="mt-3 text-sm leading-7 text-slate-300">Focused on AWS services, cloud architecture fundamentals, and operations knowledge including EC2, S3, IAM, and Lambda.</p>
           </div>
 
-          <div class="glass hover-lift rounded-[24px] p-6">
+          <div class="glass hover-lift rounded-[24px] p-6 reveal">
             <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-500/15 text-2xl">📊</div>
             <h3 class="text-xl font-semibold text-white">Data & Analytics</h3>
             <p class="mt-3 text-sm leading-7 text-slate-300">Working with data warehousing, mining, charting, and structured analysis to turn raw information into insights.</p>
           </div>
 
-          <div class="glass hover-lift rounded-[24px] p-6">
+          <div class="glass hover-lift rounded-[24px] p-6 reveal">
             <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/15 text-2xl">💻</div>
             <h3 class="text-xl font-semibold text-white">Frontend & Product</h3>
             <p class="mt-3 text-sm leading-7 text-slate-300">Building responsive interfaces, clean UI patterns, and accessible user experiences using modern web tools.</p>
@@ -327,7 +414,7 @@
       </section>
 
       <section id="projects" class="section-shell py-16 md:py-20">
-        <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between reveal">
           <div>
             <div class="text-xs font-medium uppercase tracking-[0.22em] text-violet-300">Projects</div>
             <h2 class="section-title mt-4 text-3xl font-bold md:text-5xl">Selected work and learning projects.</h2>
@@ -336,10 +423,10 @@
         </div>
 
         <div class="grid gap-6 lg:grid-cols-3">
-          <article class="glass hover-lift rounded-[26px] p-6">
+          <article class="glass hover-lift rounded-[26px] p-6 reveal">
             <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500 to-indigo-600 text-2xl">✈️</div>
             <h3 class="text-xl font-semibold text-white">Travel Buddy</h3>
-            <p class="mt-3 text-sm leading-7 text-slate-300">A smart travel planning app designed to help users discover destinations and organize trip ideas with a better browsing experience.</p>
+            <p class="mt-3 text-sm leading-7 text-slate-300">A smart travel planning app designed to help users discover destinations and organize trip ideas with a more engaging and thoughtful browsing experience.</p>
             <div class="mt-5 flex flex-wrap gap-2">
               <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] uppercase tracking-[0.1em] text-slate-300">JavaScript</span>
               <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] uppercase tracking-[0.1em] text-slate-300">Vite</span>
@@ -348,10 +435,10 @@
             <a href="https://github.com/aashish113399-sketch/travel-buddy" target="_blank" rel="noreferrer" class="mt-6 inline-flex text-sm font-medium text-violet-200 hover:text-white">Repository →</a>
           </article>
 
-          <article class="glass hover-lift rounded-[26px] p-6">
+          <article class="glass hover-lift rounded-[26px] p-6 reveal">
             <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 text-2xl">📊</div>
             <h3 class="text-xl font-semibold text-white">Data Warehouse & Mining</h3>
-            <p class="mt-3 text-sm leading-7 text-slate-300">ETL and analytics work involving warehouse design, OLAP concepts, clustering, classification, and data mining techniques using Python and MySQL.</p>
+            <p class="mt-3 text-sm leading-7 text-slate-300">ETL and analytics work involving warehouse design, OLAP concepts, clustering, classification, and data mining techniques using Python and database tools.</p>
             <div class="mt-5 flex flex-wrap gap-2">
               <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] uppercase tracking-[0.1em] text-slate-300">Python</span>
               <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] uppercase tracking-[0.1em] text-slate-300">MySQL</span>
@@ -360,10 +447,10 @@
             <a href="https://github.com/aashish113399-sketch/Data_Warehouse_Data_Mining" target="_blank" rel="noreferrer" class="mt-6 inline-flex text-sm font-medium text-amber-200 hover:text-white">Repository →</a>
           </article>
 
-          <article class="glass hover-lift rounded-[26px] p-6">
+          <article class="glass hover-lift rounded-[26px] p-6 reveal">
             <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-violet-600 text-xl font-bold text-white">AC</div>
             <h3 class="text-xl font-semibold text-white">This Portfolio</h3>
-            <p class="mt-3 text-sm leading-7 text-slate-300">A clean, modern personal portfolio built to present my profile professionally and clearly for internship and collaboration opportunities.</p>
+            <p class="mt-3 text-sm leading-7 text-slate-300">A polished, modern personal portfolio built to present my profile professionally and clearly for internship and collaboration opportunities.</p>
             <div class="mt-5 flex flex-wrap gap-2">
               <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] uppercase tracking-[0.1em] text-slate-300">HTML</span>
               <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] uppercase tracking-[0.1em] text-slate-300">Tailwind</span>
@@ -375,20 +462,20 @@
       </section>
 
       <section id="education" class="section-shell py-16 md:py-20">
-        <div class="mb-10 max-w-2xl">
+        <div class="mb-10 max-w-2xl reveal">
           <div class="text-xs font-medium uppercase tracking-[0.22em] text-violet-300">Education</div>
           <h2 class="section-title mt-4 text-3xl font-bold md:text-5xl">Academic path and continuous learning.</h2>
         </div>
 
         <div class="grid gap-6 lg:grid-cols-2">
-          <div class="glass-strong rounded-[28px] p-6 md:p-8">
+          <div class="glass-strong rounded-[28px] p-6 md:p-8 reveal">
             <div class="text-xs uppercase tracking-[0.2em] text-cyan-300">Current</div>
             <h3 class="mt-3 text-2xl font-semibold text-white">Bachelor in Information Technology</h3>
             <p class="mt-2 text-base text-violet-200">Model Institute of Technology (MIT) Nepal</p>
-            <p class="mt-5 text-sm leading-7 text-slate-300">Focus areas include software engineering, DBMS, data structures, cloud computing, data warehousing, data mining, and AI/ML fundamentals.</p>
+            <p class="mt-5 text-sm leading-7 text-slate-300">Focus areas include software engineering, DBMS, data structures, cloud computing, data warehousing, data mining, and AI/ML fundamentals with practical project work.</p>
           </div>
 
-          <div class="glass rounded-[28px] p-6 md:p-8">
+          <div class="glass rounded-[28px] p-6 md:p-8 reveal">
             <div class="text-xs uppercase tracking-[0.2em] text-cyan-300">Self-driven learning</div>
             <h3 class="mt-3 text-2xl font-semibold text-white">AWS Cloud Learning Path</h3>
             <p class="mt-2 text-base text-violet-200">Architecture and Operations</p>
@@ -398,7 +485,7 @@
       </section>
 
       <section id="contact" class="section-shell py-16 md:py-20">
-        <div class="glass-strong rounded-[32px] border border-violet-500/20 p-8 text-center md:p-12">
+        <div class="glass-strong rounded-[32px] border border-violet-500/20 p-8 text-center md:p-12 reveal">
           <div class="text-xs font-medium uppercase tracking-[0.22em] text-violet-300">Get in touch</div>
           <h2 class="section-title mt-4 text-3xl font-bold md:text-5xl">Let’s build something meaningful together.</h2>
           <p class="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-300">
@@ -406,9 +493,9 @@
           </p>
 
           <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <a href="mailto:aashishchand1001@gmail.com" class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-200">aashishchand1001@gmail.com</a>
-            <a href="https://github.com/aashish113399-sketch" target="_blank" rel="noreferrer" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-violet-400/50 hover:bg-violet-500/10">GitHub</a>
-            <a href="https://linkedin.com/in/aashish-chand" target="_blank" rel="noreferrer" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-violet-400/50 hover:bg-violet-500/10">LinkedIn</a>
+            <a href="mailto:aashishchand1001@gmail.com" class="cta-primary rounded-full px-6 py-3 text-sm font-semibold text-slate-900 transition hover:scale-[1.02]">aashishchand1001@gmail.com</a>
+            <a href="https://github.com/aashish113399-sketch" target="_blank" rel="noreferrer" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-violet-400/50 hover:text-violet-100">GitHub</a>
+            <a href="https://linkedin.com/in/aashish-chand" target="_blank" rel="noreferrer" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-violet-400/50 hover:text-violet-100">LinkedIn</a>
           </div>
         </div>
       </section>
@@ -432,6 +519,21 @@
       mobileMenu?.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
       });
+
+      const revealItems = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      revealItems.forEach((item) => observer.observe(item));
     </script>
   </body>
 </html>
