@@ -49,9 +49,9 @@ AWS Architecture, Cloud Operations, Goal: Solutions Architect Associate
 ### 📫 Connect
 
 - GitHub: [@aashish113399-sketch](https://github.com/aashish113399-sketch)
-- LinkedIn: [Aashish Chand](https://linkedin.com/in/Aashish%20Chand)
+- LinkedIn: [Aashish Chand](https://linkedin.com/in/aashish-chand)
 - Instagram: [@Ryan.chand.31](https://instagram.com/Ryan.chand.31)
-- Medium: [@Aashish chand](https://medium.com/@Aashish%20chand)
+- Medium: [@Aashish chand](https://medium.com/@aashishchand)
 - Email: aashishchand1001@gmail.com
 
 ### 🌐 Deployment
