@@ -1,8 +1,6 @@
-name: Deploy to gh-pages branch (Fallback)
+name: Manual gh-pages fallback
 
 on:
-  push:
-    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -10,14 +8,10 @@ permissions:
 
 jobs:
   deploy:
+    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          publish_branch: gh-pages
-          exclude_assets: '.github'
+      - name: Manual deploy placeholder
+        run: echo "This workflow is intentionally disabled; use the GitHub Pages workflow instead."
